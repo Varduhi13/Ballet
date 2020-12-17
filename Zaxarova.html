@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Svetlana Zakharova</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <style>
+        img {
+            border-radius: 8px;
+        }
+       
+        div.facts {
+            font-size: 20px;
+            font-family: 'Modak', cursive;
+        }
+
+        h3 {
+            color: blueviolet;
+        }
+        .text-box {
+            font-size: 21px;
+            font-family: 'Modak', cursive;
+        }
+        .biography-text {
+            font-size: 30px;
+            font-family: 'Modak', cursive;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1 class="title">Svetlana Zakharova </h1>
+
+        <h1 class="biography-header">Biography</h1>
+    </center>
+
+
+    <div class="biography-wrapper">
+        <div class="biography-text text-box">
+            Born in Lutsk (Ukraine). In 1989, she entered the Kiev Choreographic School. After studying there for six
+            years
+            (Valeria Sulegin’s class), she took part in the competition of young dancers Vaganova-Prix in St.
+            Petersburg. She
+            received a second prize and a proposal to go to graduation course at the A. Ya. Vaganova Academy of Russian
+            Ballet.
+            In 1996, Zakharova graduated from the Academy, being among the first graduates of Elena Evteeva, the former
+            famous
+            ballerina of the Mariinsky Theater. In the same year she was accepted into the troupe of this theater and in
+            the
+            next season she took the position of soloist. Her permanent teacher-tutor was Olga Moiseeva.
+        </div>
+        <div class="biography-img">
+            <img src="C:\Users\varduhi\Desktop\Ballet page\pictures\Zaxarova.png">
+        </div>
+    </div>
+    <div class="biography-wrapper">
+        <div>
+            <script src="C:\Users\varduhi\Desktop\pixi.min.js"> </script>
+            <script>
+                let app = new PIXI.Application({ width: "500", height: "500" });
+                document.body.appendChild(app.view);
+                let img = new PIXI.Sprite.from("C:\Users\varduhi\Desktop\Ballet page\pictures\Zaxarova1.jpg");
+                img.width = window.innerWidth;
+                img.height = window.innerHeight;
+                app.stage.addChild(img);
+                depthMap = new PIXI.Sprite.from("");
+                app.stage.addChild(depthMap);
+
+                displacementFilter = new PIXI.filters.DisplacementFilter(depthMap);
+                app.stage.filters = [displacementFilter];
+
+                window.onmousemove = function (e) {
+                    displacementFilter.scale.x = (window.innerWidth / 2 - e.clientX) / 20;
+                    displacementFilter.scale.y = (window.innerHeight / 2 - e.clientY) / 20;
+                };
+            </script>
+        </div>
+        <div class="text-box">
+                In 2005, for her performance as Hippolyta-Titania in John Neumeier’s A Midsummer Night’s Dream, she was awarded the Benois de la Danse International Dance Association prize; she was also awarded the title of Merited Artist of the Russian Federation.
+                <p></p>In 2007, she was awarded the Ballet magazine Soul of Dance prize (Queen of Dance nomination) and the State Prize of Russia — for the talented interpretation of the roles and development of the great traditions of the Russin ballet.
+                <p></p>In 2008, she was awarded the title of People’s Artist of the Russian Federation.
+                <p></p>In the same year she was the first among Russian dancers to receive the title of La Scala Ballet etoile.
+               <p></p> In 2010, she was awarded The Ordre des Arts et des Lettres (the French order, the grade of «Officer»).
+               <p></p>In 2015 for her performance as Marguerite Gautier, she was again awarded the Benois de la Danse International Dance Association prize.
+        </div>
+    </div>
+    <div>
+        <h1 class="biography-header"> Interesting facts </h1>
+
+    </div>
+    <div class="facts">
+        <h3>Before Fame</h3>
+        <p class="text-box2">She began studying folk dancing when she was six and was accepted into the Kiev
+            Choreographic School when she was ten. She made her professional debut with the Mariinsky Ballet at age
+            seventeen.
+            Ukrainian dancer who danced as a prima ballerina with the Bolshoi Ballet and the Teatro alla Scala.</p>
+        <h3>Family Life</h3>
+        <p class="text-box2"> She married Russian violinist Vadim Repin and had a daughter in 2011.</p>
+        <h3>BIRTHDAY</h3>
+        <p class="text-box2">June 10, 1979</p>
+    </div>
+<center>
+    <iframe width="1000" height="500" src="C:\Users\varduhi\Desktop\Ballet page\videos\VideoZaxarova.mp4">
+    </iframe>
+</center>
+</body>
+
+</html>
